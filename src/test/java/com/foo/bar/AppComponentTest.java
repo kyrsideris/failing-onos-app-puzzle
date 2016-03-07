@@ -18,6 +18,10 @@ package com.foo.bar;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.onosproject.core.CoreService;
+import org.onosproject.net.device.DeviceService;
+import org.onosproject.net.flow.FlowRuleService;
+import org.onosproject.net.host.HostService;
 
 /**
  * Set of tests of the ONOS application component.
@@ -25,12 +29,19 @@ import org.junit.Test;
 public class AppComponentTest {
 
     private AppComponent component;
+    HostService hostService = new MockHostService();
+    FlowRuleService flowRuleService = new MockFlowRuleService();
+    DeviceService deviceService = new MockDeviceService();
+    CoreService coreService = new MockCoreService();
 
     @Before
     public void setUp() {
         component = new AppComponent();
+        component.hostService = hostService;
+        component.flowRuleService = flowRuleService;
+        component.deviceService = deviceService;
+        component.coreService = coreService;
         component.activate();
-
     }
 
     @After
