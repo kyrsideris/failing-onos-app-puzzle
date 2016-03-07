@@ -20,6 +20,7 @@
      featuresRepo="mvn:${project.groupId}/${project.artifactId}/${project.version}/xml/features"
      features="${project.artifactId}">
     <description>${project.description}</description>
+<!--     <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/0.8.2.2_1</bundle> -->
     <artifact>mvn:${project.groupId}/${project.artifactId}/${project.version}</artifact>
-    <bundle>mvn:org.apache.servicemix.bundles.kafka-clients/org.apache.servicemix.bundles.kafka-clients/0.8.2.2_1</bundle>
+    <artifact>mvn:org.apache.kafka/kafka-clients/0.8.2.2</artifact>
 </app>
