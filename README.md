@@ -1184,7 +1184,7 @@ onos> shutdown -c -cc -h
 
 </code></pre>
 
-## Forth Try
+## Fourth Try
 
 In this case I coppied the bundle from `/opt/onos/apache-karaf-3.0.5/system` into `/opt/onos/apache-karaf-3.0.5/deploy`. The result was the same as of second and third try.
 
